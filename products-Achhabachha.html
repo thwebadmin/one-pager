@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Thinking Hut - Achhabachha</title>
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+ <meta name="description" content="">
+ 
+<link rel="shortcut icon" href="images/favicon.ico" /> 
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/flexslider.css" />
+
+</head>
+
+<body>
+<div class="header">
+	<div class="container">
+		<nav class="navbar navbar-inverse" role="navigation">
+        	<div class="navbar-header">
+	            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+	            </button>
+	            <a href="#" class="navbar-brand scroll-top"><img src="images/thinkinghut.png" alt="" class="img-responsive"></a>
+        	</div>
+        	<!--/.navbar-header-->
+	        <div id="main-nav" class="collapse navbar-collapse">
+	            <ul class="nav navbar-nav">
+		            <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#industry">Industry</a></li>
+                    <li><a href="index.html#customer">Customers</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#leaders">Leaders</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+					
+	            </ul>
+	        </div>
+	        <!--/.navbar-collapse-->
+	    </nav>
+	    <!--/.navbar-->
+	</div>
+	<!--/.container-->
+</div>
+<!--/.header-->
+
+<!--/.page-section-->
+
+<div id="products-list" class="page-section">
+	<div class="container">
+      <ul class="services-list-icons">
+          <li><a href="products-Achhabachha.html">AchhaBachha </a></li>
+          <li><a href="products-estore.html">eStore</a></li>
+          <li><a href="http://www.1and1.com/domain-names?ac=OM.US.US469K02463T2103a&PID=6208339" target="_blank">Domain & Hosting</a></li>
+         
+          <div class="clear"></div>
+      </ul>
+		<h2 class="">AchhaBachha</h2>
+		<p class="caption">"AchhaBachha - The Healthy Kid" is an initiative by Thinking Hut to support a healthy child, build healthy society and a healthy world. It's an Interactive Child Care portal that will provide tools, resources and comprehensive information for parents to monitor and track their precious one's health and overall growth. Parents looking out for right child care resources and searching for information will have to look no-where else.</p>
+       <p class="caption">AchhaBachha would help parents track and monitor the growth of their children in a simple, visual and interactive way. The portal would also provide a platform for the parents to interact with like-minded people, search facility for locating healthcare services and other useful tools. It's meant for the "aware" parents with children in the age group of zero to five years.</p>
+       <p class="caption">Click here to visit the portal -<a href="http://www.achhabachha.com/" target="_blank"> AchhaBachha - The Healthy Kid.</a></p>
+         <div class="text-center"><img src="images/AchhaBachha.png" alt="" class="img-responsive"></div>
+       <hr>
+	</div>
+ 
+	<!--/.container-->
+    <div class="footer">
+      <div class="container">
+		<p>&copy; 2014 ThinkingHut.  All Rights Reserved.</p>
+        <ul>
+         <li><a href="http://www.facebook.com/thinkinghut" target="_blank" class="facebook">Facebook</a></li>
+         <li><a href="http://twitter.com/thinkinghut" target="_blank" class="twitter">Twitter</a></li>
+         <li><a href="http://www.linkedin.com/company/thinking-hut-it-solutions"  target="_blank" class="linked-in">Linked In</a></li>
+         <li><a href="https://plus.google.com/100986902383542822790/about" target="_blank" class="google-plus">Google Plus</a></li>
+        </ul>
+	  </div>
+     </div>
+</div>
+<!--/#Services-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	// navigation click actions	
+	$('.scroll-link').on('click', function(event){
+		event.preventDefault();
+		var sectionID = $(this).attr("data-id");
+		scrollToID('#' + sectionID, 750);
+	});
+	// scroll to top action
+	$('.scroll-top').on('click', function(event) {
+		event.preventDefault();
+		$('html, body').animate({scrollTop:0}, 'slow'); 		
+	});
+	// mobile nav toggle
+	$('#nav-toggle').on('click', function (event) {
+		event.preventDefault();
+		$('#main-nav').toggleClass("open");
+	});
+});
+// scroll function
+function scrollToID(id, speed){
+	var offSet = 50;
+	var targetOffset = $(id).offset().top - offSet;
+	var mainNav = $('#main-nav');
+	$('html,body').animate({scrollTop:targetOffset}, speed);
+	if (mainNav.hasClass("open")) {
+		mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+		mainNav.removeClass("open");
+	}
+}
+if (typeof console === "undefined") {
+    console = {
+        log: function() { }
+    };
+}
+</script>
+<script>
+  $(document).ready(function() {
+	$(".team-bg").mouseover(function(){
+	$(this).find("#popupmap").css("display","block");
+	});
+	$(".team-bg").mouseout(function(){
+	$(this).find("#popupmap").css("display","none");
+	
+	});
+
+	
+ });
+</script>
+
+ 
+</body>
+</html>

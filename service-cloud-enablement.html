@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Thinking Hut - Cloud Enablement</title>
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+ <meta name="description" content="">
+ 
+<link rel="shortcut icon" href="images/favicon.ico" /> 
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/flexslider.css" />
+
+</head>
+
+<body>
+<div class="header">
+	<div class="container">
+		<nav class="navbar navbar-inverse" role="navigation">
+        	<div class="navbar-header">
+	            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+	            </button>
+	            <a href="#" class="navbar-brand scroll-top"><img src="images/thinkinghut.png" alt="" class="img-responsive"></a>
+        	</div>
+        	<!--/.navbar-header-->
+	        <div id="main-nav" class="collapse navbar-collapse">
+	            <ul class="nav navbar-nav">
+		            <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#industry">Industry</a></li>
+                    <li><a href="index.html#customer">Customers</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#leaders">Leaders</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+				
+	            </ul>
+	        </div>
+	        <!--/.navbar-collapse-->
+	    </nav>
+	    <!--/.navbar-->
+	</div>
+	<!--/.container-->
+</div>
+<!--/.header-->
+<!--/.page-section-->
+
+<div id="service-list" class="page-section">
+	<div class="container">
+		<h2 class="">Cloud Enablement</h2>
+        <div class="cloud-list">
+          <a href="service-amazonweb-services.html" target="_blank">Amazon Web Services </a>|
+          <a href="service-googleappengine.html" target="_blank">Google App Engine </a>|
+          <a href="service-microsoft-windows-azure.html" target="_blank">Microsoft Windows Azure </a>
+        </div>
+     
+		<p class="caption">Cloud computing development offers a cost-efficient, secure alternative to traditional hardware infrastructures. Rather than managing your on-site infrastructure, cloud computing development allows you to instead concentrate on your core business. Additionally, cloud computing development eliminates business risk up front due to its scalability and elasticity.</p>
+         <div class="row text-center">
+           <div class="col-lg-6"><img src="images/cloud_graph.jpg" alt="" class="img-responsive"></div>
+           <div class="col-lg-6"><img src="images/cloud-img2.jpg" alt="" class="img-responsive"></div>
+         </div>
+         <p class="caption">At Thinking Hut, we understand that ultimately, the cloud is about users, not about the development itself, but that doesn't mean development can be neglected. We help you evaluate and finalize the right cloud platform for your needs. Be it Amazon Web Services, Google App Engine or MS Azure, we have strong expertise in developing and migrating applications to these platforms. With a deep understanding of the security, multi-tenancy, and manageability issues that differentiate SaaS software from on-premise software, we also help you to identify the right set of applications that can be migrated from your enterprise portfolio to start reaping the cloud benefits.</p>
+       <hr>
+	</div>
+ 
+	<!--/.container-->
+    <div class="footer">
+      <div class="container">
+		<p>&copy; 2014 ThinkingHut.  All Rights Reserved.</p>
+        <ul>
+         <li><a href="http://www.facebook.com/thinkinghut" target="_blank" class="facebook">Facebook</a></li>
+         <li><a href="http://twitter.com/thinkinghut" target="_blank" class="twitter">Twitter</a></li>
+         <li><a href="http://www.linkedin.com/company/thinking-hut-it-solutions"  target="_blank" class="linked-in">Linked In</a></li>
+         <li><a href="https://plus.google.com/100986902383542822790/about" target="_blank" class="google-plus">Google Plus</a></li>
+        </ul>
+	  </div>
+     </div>
+</div>
+<!--/#Services-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	// navigation click actions	
+	$('.scroll-link').on('click', function(event){
+		event.preventDefault();
+		var sectionID = $(this).attr("data-id");
+		scrollToID('#' + sectionID, 750);
+	});
+	// scroll to top action
+	$('.scroll-top').on('click', function(event) {
+		event.preventDefault();
+		$('html, body').animate({scrollTop:0}, 'slow'); 		
+	});
+	// mobile nav toggle
+	$('#nav-toggle').on('click', function (event) {
+		event.preventDefault();
+		$('#main-nav').toggleClass("open");
+	});
+});
+// scroll function
+function scrollToID(id, speed){
+	var offSet = 50;
+	var targetOffset = $(id).offset().top - offSet;
+	var mainNav = $('#main-nav');
+	$('html,body').animate({scrollTop:targetOffset}, speed);
+	if (mainNav.hasClass("open")) {
+		mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+		mainNav.removeClass("open");
+	}
+}
+if (typeof console === "undefined") {
+    console = {
+        log: function() { }
+    };
+}
+</script>
+<script>
+  $(document).ready(function() {
+	$(".team-bg").mouseover(function(){
+	$(this).find("#popupmap").css("display","block");
+	});
+	$(".team-bg").mouseout(function(){
+	$(this).find("#popupmap").css("display","none");
+	
+	});
+
+	
+ });
+</script>
+ 
+</body>
+</html>

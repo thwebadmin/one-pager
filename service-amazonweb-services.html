@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Thinking Hut - Amazon Web Services</title>
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+ <meta name="description" content="">
+
+<link rel="shortcut icon" href="images/favicon.ico" /> 
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/flexslider.css" />
+
+</head>
+
+<body>
+<div class="header">
+	<div class="container">
+		<nav class="navbar navbar-inverse" role="navigation">
+        	<div class="navbar-header">
+	            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+	            </button>
+	            <a href="#" class="navbar-brand scroll-top"><img src="images/thinkinghut.png" alt="" class="img-responsive"></a>
+        	</div>
+        	<!--/.navbar-header-->
+	        <div id="main-nav" class="collapse navbar-collapse">
+	            <ul class="nav navbar-nav">
+		            <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#industry">Industry</a></li>
+                    <li><a href="index.html#customer">Customers</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#leaders">Leaders</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+					
+	            </ul>
+	        </div>
+	        <!--/.navbar-collapse-->
+	    </nav>
+	    <!--/.navbar-->
+	</div>
+	<!--/.container-->
+</div>
+<!--/.header-->
+
+
+<!--/.page-section-->
+
+<div id="service-list" class="page-section">
+	<div class="container">
+		<h2 class="">Amazon Web Services</h2>
+        <div class="cloud-list">
+         <a href="service-amazonweb-services.html">Amazon Web Services </a>|
+          <a href="service-googleappengine.html">Google App Engine </a>|
+          <a href="service-microsoft-windows-azure.html">Microsoft Windows Azure </a>
+     </div>
+		<p class="caption">Amazon Web Services is the leading provider of cloud computing services in the world. It is one of the early and also the most successful implementations of the Public Cloud. Amazon offers the core capabilities to run a complete web application or a Line of Business application.With AWS you can requisition compute power, storage, and other services-gaining access to a suite of elastic IT infrastructure services as your business demands them.With AWS you have the flexibility to choose whichever development platform or programming model makes the most sense for the problems you're trying to solve. You pay only for what you use, with no up-front expenses or long-term commitments, making AWS the most cost-effective way to deliver your application to your customers and clients.</p>
+         <div class=" text-center">
+           <img src="images/amezon.jpg" alt="" class="img-responsive">
+         </div>
+         <p class="caption">Using Amazon Web Services, an e-commerce web site can weather unforeseen demand with ease; a pharmaceutical company can "rent" computing power to execute large-scale simulations; a media company can serve unlimited videos, music, and more; and an enterprise can deploy bandwidth-consuming services and training to its mobile workforce.</p>
+       <hr>
+	</div>
+ 
+	<!--/.container-->
+    <div class="footer">
+      <div class="container">
+		<p>&copy; 2014 ThinkingHut.  All Rights Reserved.</p>
+        <ul>
+         <li><a href="http://www.facebook.com/thinkinghut" target="_blank" class="facebook">Facebook</a></li>
+         <li><a href="http://twitter.com/thinkinghut" target="_blank" class="twitter">Twitter</a></li>
+         <li><a href="http://www.linkedin.com/company/thinking-hut-it-solutions"  target="_blank" class="linked-in">Linked In</a></li>
+         <li><a href="https://plus.google.com/100986902383542822790/about" target="_blank" class="google-plus">Google Plus</a></li>
+        </ul>
+	  </div>
+     </div>
+</div>
+<!--/#Services-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	// navigation click actions	
+	$('.scroll-link').on('click', function(event){
+		event.preventDefault();
+		var sectionID = $(this).attr("data-id");
+		scrollToID('#' + sectionID, 750);
+	});
+	// scroll to top action
+	$('.scroll-top').on('click', function(event) {
+		event.preventDefault();
+		$('html, body').animate({scrollTop:0}, 'slow'); 		
+	});
+	// mobile nav toggle
+	$('#nav-toggle').on('click', function (event) {
+		event.preventDefault();
+		$('#main-nav').toggleClass("open");
+	});
+});
+// scroll function
+function scrollToID(id, speed){
+	var offSet = 50;
+	var targetOffset = $(id).offset().top - offSet;
+	var mainNav = $('#main-nav');
+	$('html,body').animate({scrollTop:targetOffset}, speed);
+	if (mainNav.hasClass("open")) {
+		mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+		mainNav.removeClass("open");
+	}
+}
+if (typeof console === "undefined") {
+    console = {
+        log: function() { }
+    };
+}
+</script>
+<script>
+  $(document).ready(function() {
+	$(".team-bg").mouseover(function(){
+	$(this).find("#popupmap").css("display","block");
+	});
+	$(".team-bg").mouseout(function(){
+	$(this).find("#popupmap").css("display","none");
+	
+	});
+	
+ });
+</script>
+
+ 
+</body>
+</html>
